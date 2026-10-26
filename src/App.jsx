@@ -1,30 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import PartnerPage from './pages/PartnerPage';
-import LoginPage from './pages/LoginPage';
-import DashboardPage from './pages/DashboardPage';
-import SignupPage from './pages/Signup/SignupPage';
-import AdminDashboardPage from './pages/AdminDashboardPage';
-import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import AdminRoutes from './admin/routes/AdminRoutes';
+import ClientRoutes from './client/routes/ClientRoutes';
 
-import ForgotPasswordPage from './pages/ForgotPasswordPage';
-import ResetPasswordPage from './pages/ResetPasswordPage';
-
+/**
+ * Top-level Application Router orchestrating Admin and Client portals
+ */
 function App() {
   return (
     <Router>
       <div className="min-h-screen font-sans">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/partner" element={<PartnerPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
-          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-          <Route path="/reset-password" element={<ResetPasswordPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="/admin-dashboard" element={<AdminDashboardPage />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          {/* Super Admin Portal Routing */}
+          <Route path="/admin/*" element={<AdminRoutes />} />
+          <Route path="/admin-dashboard" element={<Navigate to="/admin/dashboard" replace />} />
+          <Route path="/admin-dashboard/*" element={<Navigate to="/admin/dashboard" replace />} />
+
+          {/* Client & Partner Portal Routing */}
+          <Route path="/*" element={<ClientRoutes />} />
         </Routes>
       </div>
     </Router>

@@ -1,0 +1,43 @@
+/* ==========================================================================
+   AI Gym OS - Client & Partner Portal Global Stylesheet
+   ========================================================================== */
+
+/* Client Portal Specific View Containers */
+.client-portal-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-page-color, #f8fafc);
+  color: var(--sidebar-text, #475569);
+}
+
+/* Client Gym Dashboard KPI Stat Cards */
+.client-stat-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.client-stat-card:hover {
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+/* Client Membership Plan Card */
+.client-plan-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  transition: all 0.25s ease;
+}
+
+.client-plan-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--app-primary, #f97316);
+  box-shadow: 0 12px 28px -6px rgba(249, 115, 22, 0.15);
+}
+

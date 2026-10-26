@@ -1,0 +1,65 @@
+/* ==========================================================================
+   AI Gym OS - Super Admin Portal Global Stylesheet
+   ========================================================================== */
+
+/* Admin Portal Specific View Containers */
+.admin-portal-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-page-color, #080a0f);
+  color: var(--sidebar-text, #94a3b8);
+}
+
+/* Admin Sidebar Luxury Theme Tokens */
+.admin-sidebar {
+  background-color: var(--sidebar-bg, #0b0f19);
+  border-right: 1px solid var(--sidebar-border, rgba(255, 255, 255, 0.08));
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.admin-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--sidebar-text, #94a3b8);
+  transition: all 0.2s ease;
+}
+
+.admin-sidebar-item:hover {
+  background-color: var(--sidebar-hover-bg, rgba(255, 255, 255, 0.05));
+  color: var(--sidebar-text-hover, #ffffff);
+}
+
+.admin-sidebar-item.active {
+  background: var(--gradient-gold, linear-gradient(135deg, #fde047 0%, #fb923c 45%, #f97316 75%, #ea580c 100%));
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
+}
+
+/* Admin Header Navigation */
+.admin-header {
+  background-color: var(--header-bg, rgba(11, 15, 25, 0.95));
+  border-bottom: 1px solid var(--header-border, rgba(255, 255, 255, 0.08));
+  backdrop-filter: blur(8px);
+}
+
+/* Admin Dashboard KPI Stat Cards */
+.admin-stat-card {
+  background-color: var(--panel-bg, rgba(18, 20, 26, 0.82));
+  border: 1px solid var(--panel-border, rgba(255, 196, 78, 0.22));
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: var(--panel-shadow, 0 10px 30px rgba(0, 0, 0, 0.45));
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--panel-border-hover, rgba(255, 196, 78, 0.48));
+}
+
